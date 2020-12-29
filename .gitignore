@@ -1,52 +1,23 @@
-# Prerequisites
-*.d
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
+# 忽略所有的 .a 文件 
 *.a
-*.la
-*.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# 但跟踪所有的 lib.a，即便你在前面忽略了 .a 文件 
+!lib.a
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# 只忽略当前目录下的 TODO 文件，而不忽略子目录的文件 subdir/TODO 不递归的忽略
+/TODO
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# 忽略任何目录下名为 build 的文件夹 递归的忽略
+build/
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# 忽略某一目录如doc目录的 doc/notes.txt，但不忽略其子目录里面 doc/server/arch.txt 
+doc/*.txt
+
+# 忽略 doc/ 目录及其所有子目录下的 .pdf 文件 
+doc/**/*.pdf
+
+
+
+
+
